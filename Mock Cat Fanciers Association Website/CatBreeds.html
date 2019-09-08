@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<!--This tag allows for a responsive viewport for the user, irregardless of what device they may be viewing the website on. According to MDN, the viewport is the visible area of the webpage, which may not always be the same size as the page that is rendered. By allowing the viewport width to scale with the screen of the device, the website will appear more uniform when viewed from either a desktop computer, tablet, or mobile phone. Source: https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	
+	<!--Title element that will populate the top of the tab when in the browser, to inform the user of what site this particular tab contains. -->
+	<title>The Cat Fanciers' Association, Inc. Official Breeds</title>
+
+	<!--Required CSS files to utilize bootstrap's CSS features via Boostrap's content delivery network Source: https://getbootstrap.com/docs/4.0/getting-started/introduction/-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!--We link our own CSS file here which will alter the appearance of our elements-->
+	<link href="style.css" rel="stylesheet">
+</head>
+<!--Colors background of body that is not emphasized with a div containing important content, its color matches that of the navbar-->
+<body class="DarkBgFiller">
+
+<!-- NAVBAR SECTION -->
+<!-- class "navbar navbar-expand-md" indicates that they horizontal navbar will transform responsively into a vertical navbar for screens of width 768px and below/medium size screens. This will assist in viewing the site for mobile users. Source: https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+    <!--The div containing the elements of the navigation bar have class "container-fluid" which allows for the width of the container to expand to the full width of the screen. Source: https://www.jquery-az.com/bootstrap-container-and-container-fluid-what-is-the-difference/-->
+    <div class="container-fluid">
+        
+        <!--This anchor element contains the CFA/CatFancier's Association logo, which is linked/href'd to the main page. The logo is from the CFA's official website, Source: http://cfa.org-->
+        <a class="navbar-brand"><img src="img/cfa-logo-vertical3.png"></a>
+
+    <!--When the navbar becomes vertical for md size screens and bellow, the links in the navbar will not be visible int he viewport, instead they should be allowed to be accessed from a toggleable button that exposes a list of links the navbar would normally  contain. Source: https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp/-->
+      <button class="navbar-toggler btn-light" type="button" data-toggle="collapse" data-target="#CFAnavbar"></button>
+    
+        <!--Let's create a div that will hold an unordered list of list items that are of class "nav item", which in turn contain anchor elements of class "nav-link: where the list elements will be the links to our other subpages. -->
+        <div class="navbar-collapse collapse justify-content-between" id="CFAnavbar">
+      
+            <div><!--placeholder to evenly space flexbox items and center links--></div>
+            <ul class="navbar-nav">
+            <!--Since a user on this page is already at the "Official Breeds" page, bold the text of the link to the Official Breeds page to indicate to the user where they are at in terms of overall navigation of the webpage.-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="CatBreeds.html"><strong>Official Breeds</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CatCare.html"><strong>Cat Care</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ShowSchedule.html"><strong>Show Schedule</strong></a>
+                </li>
+            </ul>
+
+            <!--We use the flex-row to justify the content of the navbar, which by default sits to the right, so that it is out of the way of our main links. Social media icons provided by fontawesome, see included javascript above closing body tag.-->
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/CFAcats/"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/cfacats/"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="https://twitter.com/cfaorg"><i class="fab fa-twitter"></i></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+
+<!--- OFFICIAL BREEDS DIV CONTENT  WITH OUTSIDE SOURCES-->
+<div class="CFABackground container-fluid">
+	<!--This div will contain text that is oriented across the block/row and centered-->
+	<div class="row welcome text-center">
+		<div class="col-12">
+			<h1 class="display-4">Official Breeds</h1>
+		</div>
+		<hr>
+		<!--In bootstrap, the layout of the webpage is broken into 12 vertical columns from left to right, this div will take up all 12 columns-->
+		<div class="col-12 container-fluid">
+			<p class="lead">Currently, the Cat Fancier's Association officially recognizes 42 feline breeds that are eligible for competition in the Champion Class. Of all the breeds, the top 3 most prominent that have been in competition for over a century include the Persian, British Shorthair, and Ragdoll.</p>
+
+			<p><i>Click the names of the breeds below to learn more about them. Image sources <a href="http://www.catbreedslist.com/all-cat-breeds/persian-cat.html#.XHtvYohKguU"><sub>1, </sub></a><a href="http://www.catbreedslist.com/all-cat-breeds/british-shorthair.html#.XHtvkIhKguU"><sub>2, </sub></a><a href="http://www.catbreedslist.com/all-cat-breeds/ragdoll.html#.XHtvtIhKguU"><sub>3</sub></a></i></p>
+		</div>
+		
+	</div>	
+</div>
+
+<!--A Table was used to display the content in this div, the top row of the table was used to populate the table data cell elements with a picture, the bottom row of the table was used to populate the links that correspond with the images in the top row. The images have been resized to 75% of their original to alloq for visual spacing between the images.-->
+<div class="CFABackground ">
+  <div class="row text-center ">
+   <table id="BreedTable">
+   		<tr>
+   			<td>
+   				<img class="h-75 w-75" src="img/Persian.jpg">
+   			</td>
+   			
+   			<td> 
+   				<img class="h-75 w-75" src="img/BritishShorthair.jpg">
+   			</td>
+
+   			<td> 
+   				<img  class="h-75 w-75" src="img/Ragdoll.jpg">
+   			</td>
+   		</tr>
+   		<tr>
+   			<td>
+   				<p class="lead"><a href="https://en.wikipedia.org/wiki/Persian_cat">Persian</a></p>
+   			</td>
+
+   			<td>
+   				<p class="lead"><a href="https://en.wikipedia.org/wiki/British_Shorthair">British Shorthair</a></p>
+   			</td>
+
+   			<td>
+   				<p class="lead"><a href="https://en.wikipedia.org/wiki/Ragdoll">Ragdoll</a></p>
+   			</td>
+   		</tr>
+   </table>
+</div>
+
+
+<!--Div used to color bottom portion of page to match navbar-->
+<div class="DarkBackgroundFiller">
+</div>
+
+
+
+<!--Allows us to use jQuery, which is a library that simplifies DOM node traversal and AJAX. It is required to use Bootstrap 4.0. Source: https://jquery.com/-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<!--Allows for use of Popper JS which is a library that allows for easy identification of positioning of page elements relative to other elements. It is required to use Boostrap 4.0 Source: https://getbootstrap.com/docs/4.0/getting-started/introduction/-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!--Required Javascript files to utilize bootstrap's JS features via Boostrap's content delivery network Source: https://getbootstrap.com/docs/4.0/getting-started/introduction/-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!--Using premade social media icons i.e. the logo for instagram, twitter, and facebook that will act as buttons for the respective platform for The Cat Fancier's Association Source: https://fontawesome.com/-->
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</body>
+</html>
+
+

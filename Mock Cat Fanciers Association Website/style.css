@@ -1,0 +1,108 @@
+/*Using googleAPI to import a font style, source: https://www.youtube.com/watch?v=9cKsq14Kfsw*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+
+}
+/* Bootstrap Padding Fix*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+/*Padding content from the top so the navbar doesn't cover elements at the top of the body immediately after*/
+body { 
+    padding-top: 165px; 
+}
+
+/*Make all navbar items underlined when moused over for easier readability*/
+.nav-item:hover{
+    text-decoration:underline;
+}
+
+/*Limit max height of images in home carousel to avoid too much image stretching*/
+
+.carousel-item img{
+max-height: 750px;
+}
+
+/*Customize background of jumbotron so that it matches my colorscheme with grey*/
+.jumbotron{
+background: #d3d3d3;
+max-height: 250px;
+}
+
+/*Used so we can customize the thematic break elements throughout the page*/
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/*Applied to maintain a grey background that colors divs containing content we want to emphasize, and distinguish it from the blankspace background color of the body*/
+.CFABackground {
+background: #d3d3d3;
+  }
+
+/*Centers youtube video to the middle of the home page*/
+.centered {
+    width: 560px; 
+    height: 315px; 
+    top: 0; right: 0; 
+    bottom: 0; left: 0;
+    margin: auto; 
+}
+
+  /*The panel class simply creates a bordered box with content inside for our Show Schedule page, 
+  we will alter the y-axis overflow behavior with css such that any content that does not fit within 
+  a 300px height of the panel will need to be scrolled down to view. 
+  Source: https://www.w3schools.com/bootstrap/bootstrap_panels.asp 
+  Source: https://stackoverflow.com/questions/40112618/bootstrap4-adding-scrollbar-to-div?rq=1*/
+.panel{
+      top: 0; right: 0; 
+    bottom: 0; left: 0;
+    margin: auto; 
+ 
+      height: 300px;
+      overflow-y: scroll;
+      width:50%;
+      }
+/*Colors background of body that is not emphasized with a div containing important content, its color matches that of the navbar*/
+.DarkBgFiller{
+  background-color: #343A40;
+}
+
+ul {
+    text-align: left;
+    list-style-position: inside;
+}
+/*This id selector is used in the Official Breeds page to center the table containing the cat breed content in relation to the page width as a whole*/
+#BreedTable{
+  margin: 0 auto;
+  padding: 0 0 0 0;
+}
+/*Custom caption font color for cat image in Show Schedule page, to distinguish text from dark background color*/
+#DarrenCaption {
+    color: #D3D3D3;
+  }
+
+  /*The random cat image provided by the API used in script.js which is executed on the Cat Care page can return images of varying dimensions, we use this id selector to ensure that the images displayed are uniform*/
+
+#randomCatImage{
+    max-height: 450px;
+    max-width: 450px;
+    min-height: 450px;
+    min-width: 450px;
+
+  }
+/*Used to center the image of Marshmallow on the Cat Care Page*/
+#Marshmallow{
+      top: 0; right: 0; 
+    bottom: 0; left: 0;
+    margin: auto; 
+}
+
+
+
+
+
+

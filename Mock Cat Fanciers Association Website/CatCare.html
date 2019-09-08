@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<!--This tag allows for a responsive viewport for the user, irregardless of what device they may be viewing the website on. According to MDN, the viewport is the visible area of the webpage, which may not always be the same size as the page that is rendered. By allowing the viewport width to scale with the screen of the device, the website will appear more uniform when viewed from either a desktop computer, tablet, or mobile phone. Source: https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	
+	<!--Title element that will populate the top of the tab when in the browser, to inform the user of what site this particular tab contains. -->
+	<title>The Cat Fanciers' Association, Inc. Cat Care</title>
+
+	<!--Required CSS files to utilize bootstrap's CSS features via Boostrap's content delivery network Source: https://getbootstrap.com/docs/4.0/getting-started/introduction/-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!--We link our own CSS file here which will alter the appearance of our elements-->
+	<link href="style.css" rel="stylesheet">
+
+	<!--JAVASCRIPT FOR ASYNCHRONOUS GET REQUEST-->
+	<script src="javascript/script.js"></script>
+</head>
+<!--Colors background of body that is not emphasized with a div containing important content, its color matches that of the navbar-->
+<body class="DarkBgFiller">
+
+<!-- NAVBAR SECTION -->
+<!-- class "navbar navbar-expand-md" indicates that they horizontal navbar will transform responsively into a vertical navbar for screens of width 768px and below/medium size screens. This will assist in viewing the site for mobile users. Source: https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+    <!--The div containing the elements of the navigation bar have class "container-fluid" which allows for the width of the container to expand to the full width of the screen. Source: https://www.jquery-az.com/bootstrap-container-and-container-fluid-what-is-the-difference/-->
+    <div class="container-fluid">
+        
+        <!--This anchor element contains the CFA/CatFancier's Association logo, which is linked/href'd to the main page. The logo is from the CFA's official website, Source: http://cfa.org-->
+        <a class="navbar-brand"><img src="img/cfa-logo-vertical3.png"></a>
+
+    <!--When the navbar becomes vertical for md size screens and bellow, the links in the navbar will not be visible int he viewport, instead they should be allowed to be accessed from a toggleable button that exposes a list of links the navbar would normally  contain. Source: https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp/-->
+      <button class="navbar-toggler btn-light" type="button" data-toggle="collapse" data-target="#CFAnavbar"></button>
+    
+        <!--Let's create a div that will hold an unordered list of list items that are of class "nav item", which in turn contain anchor elements of class "nav-link: where the list elements will be the links to our other subpages. -->
+        <div class="navbar-collapse collapse justify-content-between" id="CFAnavbar">
+      
+            <div><!--placeholder to evenly space flexbox items and center links--></div>
+            <ul class="navbar-nav">
+            <!--Since a user on this page is already at the "Cat Care" page, bold the text of the link to the Cat Care page to indicate to the user where they are at in terms of overall navigation of the webpage.-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CatBreeds.html"><strong>Official Breeds</strong></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="CatCare.html"><strong>Cat Care</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ShowSchedule.html"><strong>Show Schedule</strong></a>
+                </li>
+            </ul>
+
+            <!--We use the flex-row to justify the content of the navbar, which by default sits to the right, so that it is out of the way of our main links. Social media icons provided by fontawesome, see included javascript above closing body tag.-->
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/CFAcats/"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/cfacats/"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="https://twitter.com/cfaorg"><i class="fab fa-twitter"></i></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<!--- CAT CARE SCTION -->
+  <<!--Paragraphs typography styling of bootstrap-->
+<div class="paragraphs">
+  <!--All content within this div will have a grey background to visually emphasize the content, furthermore all content within this div will be held in a single row so we can arrange pictures/etc adjacent to text. Source:https://stackoverflow.com/questions/33679875/whats-the-meaning-of-the-row-class-in-bootstrap-its-difference-from-containe-->
+  <div class="row CFABackground">
+<!--Image of cat provided by personal friend, who owns the cat with permission to use. The image will be left-aligned in the row.-->
+  	<div class="col-md" >
+      	<img class="d-block w-75 h-75" src="img/Marshmallow.png" id="Marshmallow">
+      	        <!--Using caption styling for small caption, as owner of cat/image wanted the cat's name to appear somewhere on page as part of permission for use.-->
+      	<p class="caption" align="center"><i>Marshmallow, Siamese Mix</i></p>
+  	</div>
+  	
+  	<div class="col-sm welcome text-center">
+  		<h1 class="display-4">Cat Care</h1>
+  		
+  		<div><a href="https://www.aspca.org/pet-care/cat-care/general-cat-care"><sub>source</sub></a></div>
+  		
+	  	<div>
+		<ul>
+			<li>At minimum, an enclosed space/home that is dry and protected from the elements should be provided for your cat. </li>
+			<br>
+			<li>Give clean and fresh water in a designated bowl, be sure to wash the bowl at the end of each day as well.</li>
+			<br>
+			<li>Fresh food should be provided daily in a separate bowl from that used for water.</li> 
+			<br>
+			<li>Keep the dishes separated as to not have food accidentally contaminating water bowls, and clean daily. </li>
+			<br>
+			<li>A litter box should be placed in a quiet space away from the housing structure and food/water dishes. </li>
+			<br>
+			<li>The litter should be scooped/filtered daily and topped off with fresh litter. Entire litterbox should be replaced weekly at minimum.</li>
+			<br>
+			<li>Cats should at minimum visit their veterinarian every twelve months. </li>
+			<br>
+			<li>Any signs of unusual behavior or illness, such as excessive vomiting, urination, etc. warrants an immediate medical visit.</li>
+
+		</ul>
+	</div>
+	
+
+	<!--SUBMIT BUTTON TO DISPLAY RANDOM CAT PICTURE-->
+	<div>
+		<form>
+			<fieldset>
+				<label>Click the button below for a random cat!</label>
+				<br>
+				<input type="submit" id="GetCatButton" class="btn btn-secondary" value="I want Cats!"/>
+
+			</fieldset>
+		</form>
+	</div>	
+	<hr>
+
+	<!--RANDOM CAT IMAGE DIV-->
+	<div class="" id="RandomCatImage">
+	</div>
+
+   </div>
+</div>
+
+
+<!--- Cat API Section-->
+
+
+<!--Allows us to use jQuery, which is a library that simplifies DOM node traversal and AJAX. It is required to use Bootstrap 4.0. Source: https://jquery.com/-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<!--Allows for use of Popper JS which is a library that allows for easy identification of positioning of page elements relative to other elements. It is required to use Boostrap 4.0 Source: https://getbootstrap.com/docs/4.0/getting-started/introduction/-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!--Required Javascript files to utilize bootstrap's JS features via Boostrap's content delivery network Source: https://getbootstrap.com/docs/4.0/getting-started/introduction/-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!--Using premade social media icons i.e. the logo for instagram, twitter, and facebook that will act as buttons for the respective platform for The Cat Fancier's Association Source: https://fontawesome.com/-->
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</body>
+</html>

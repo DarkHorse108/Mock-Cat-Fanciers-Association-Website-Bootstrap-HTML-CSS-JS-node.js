@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<!--This tag allows for a responsive viewport for the user, irregardless of what device they may be viewing the website on. According to MDN, the viewport is the visible area of the webpage, which may not always be the same size as the page that is rendered. By allowing the viewport width to scale with the screen of the device, the website will appear more uniform when viewed from either a desktop computer, tablet, or mobile phone. Source: https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	
+	<!--Title element that will populate the top of the tab when in the browser, to inform the user of what site this particular tab contains. -->
+	<title>The Cat Fanciers' Association, Inc. Show Schedule</title>
+
+	<!--Required CSS files to utilize bootstrap's CSS features via Boostrap's content delivery network Source: https://getbootstrap.com/docs/4.0/getting-started/introduction/-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!--We link our own CSS file here which will alter the appearance of our elements-->
+	<link href="style.css" rel="stylesheet">
+</head>
+<!--Colors background of body that is not emphasized with a div containing important content, its color matches that of the navbar-->
+<body class="DarkBgFiller">
+
+<!-- NAVBAR SECTION -->
+<!-- class "navbar navbar-expand-md" indicates that they horizontal navbar will transform responsively into a vertical navbar for screens of width 768px and below/medium size screens. This will assist in viewing the site for mobile users. Source: https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+
+    <!--The div containing the elements of the navigation bar have class "container-fluid" which allows for the width of the container to expand to the full width of the screen. Source: https://www.jquery-az.com/bootstrap-container-and-container-fluid-what-is-the-difference/-->
+    <div class="container-fluid">
+        
+        <!--This anchor element contains the CFA/CatFancier's Association logo, which is linked/href'd to the main page. The logo is from the CFA's official website, Source: http://cfa.org-->
+        <a class="navbar-brand"><img src="img/cfa-logo-vertical3.png"></a>
+
+    <!--When the navbar becomes vertical for md size screens and bellow, the links in the navbar will not be visible int he viewport, instead they should be allowed to be accessed from a toggleable button that exposes a list of links the navbar would normally  contain. Source: https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp/-->
+      <button class="navbar-toggler btn-light" type="button" data-toggle="collapse" data-target="#CFAnavbar"></button>
+    
+        <!--Let's create a div that will hold an unordered list of list items that are of class "nav item", which in turn contain anchor elements of class "nav-link: where the list elements will be the links to our other subpages. -->
+        <div class="navbar-collapse collapse justify-content-between" id="CFAnavbar">
+      
+            <div><!--placeholder to evenly space flexbox items and center links--></div>
+            <ul class="navbar-nav">
+            <!--Since a user on this page is already at the "Show Schedule" page, bold the text of the link to the Show Schedule page to indicate to the user where they are at in terms of overall navigation of the webpage.-->
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CatBreeds.html"><strong>Official Breeds</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CatCare.html"><strong>Cat Care</strong></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="ShowSchedule.html"><strong>Show Schedule</strong></a>
+                </li>
+            </ul>
+
+            <!--We use the flex-row to justify the content of the navbar, which by default sits to the right, so that it is out of the way of our main links. Social media icons provided by fontawesome, see included javascript above closing body tag.-->
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/CFAcats/"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/cfacats/"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="https://twitter.com/cfaorg"><i class="fab fa-twitter"></i></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+
+<!--- SHOW SCHEDULE SCROLLBOX SECTION -->
+<<!--Paragraphs typography styling of bootstrap-->
+<div class="paragraphs">
+    <!--All content within this div will have a grey background to visually emphasize the content, furthermore all content within this div will be held in a single row so we can arrange pictures/etc adjacent to text. Source:https://stackoverflow.com/questions/33679875/whats-the-meaning-of-the-row-class-in-bootstrap-its-difference-from-containe-->
+  <div class="row CFABackground">
+  	<!--Image of cat provided by personal friend, who owns the cat with permission to use. The image will be left-aligned in the row.-->
+  	<div class="col-sm" >
+      	<img class="d-block w-100 h-100 pull-left" src="img/DARREN.JPG">
+        <!--Using caption styling for small caption, as owner of cat/image wanted the cat's name to appear somewhere on page as part of permission for use.-->
+      	<p class="caption" align="center"><i id="DarrenCaption">Darren Mesler, Best Cat Winner 2017</i></p>
+  	</div>
+
+  	<!--Div will contain unordered list that is in a scrollbox form. We will have the text centered and continue to use the same stylization to keep consistency throughout the entire site.-->
+  	<div class="col-sm welcome text-center">
+  		<h1 class="display-4">Show Schedule</h1>
+  		<hr>
+        <!--The panel class simply creates a bordered box with content inside, we will alter the y-axis overflow behavior with css such that any content that does not fit within a 300px height of the panel will need to be scrolled down to view. We target the panel class in our css stylesheet. Source: https://www.w3schools.com/bootstrap/bootstrap_panels.asp Source: https://stackoverflow.com/questions/40112618/bootstrap4-adding-scrollbar-to-div?rq=1-->
+  		<div class="panel panel-primary">
+
+          <div class="panel-body scrollable-panel text-left">
+            <p>
+            March 2, 2019 - San Jose, California, USA
+            </p>
+            <p>
+           	March 3, 2019 - Tokyo, JAPAN
+            </p>
+            <p>
+            March 9, 2019 - Portland, Oregon, USA
+            </p>
+            <p>
+            March 10, 2019 - Timonium, Maryland, USA
+            </p>
+            <p>
+            March 16, 2019 - Honolulu, Hawaii, USA
+            </p>
+            <p>
+           	March 17, 2019 - Kiev, UKRAINE
+            </p>
+            <p>
+            March 23, 2019 - Oaks, Pennsylvania, USA
+            </p>
+            <p>
+            March 24, 2019 - Knoxville, Tennessee, USA
+            </p>
+            <p>
+            March 30, 2019 - Auburn, New York, USA
+            </p>
+            <p>
+            March 31, 2019 - Sofia, BULGARIA
+            </p>
+            <p>
+            April 6, 2019 - Pleasanton, California, USA
+            </p>
+            <p>
+            April 7, 2019 - Mansfield, Ohio, USA
+            </p>
+            <p>
+            April 13, 2019 - Cherry Hill, New Jersey, USA
+            </p>
+            <p>
+            April 14, 2019 - Longview, Washington, USA
+            </p>
+            <p>
+            April 20, 2019 - Frederick, Maryland, USA
+            </p>
+              <p>
+            April 21, 2019 - Hamilton, Ohio, USA
+            </p>
+            <p>
+           	April 27, 2019 - Springfield, Illinois, USA
+            </p>
+            <p>
+            April 28, 2019 - Easton, Pennsylvania, USA
+            </p>
+            <p>
+            May 4, 2019 - Concord, New Hampshire, USA
+            </p>
+            <p>
+            May 5, 2019 - Lawrenceville, Georgia, USA
+            </p>
+            <p>
+           	May 11, 2019 - Ann Arbor, Michigan, USA
+            </p>
+            <p>
+            May 12, 2019 - Tokyo, JAPAN
+            </p>
+            <p>
+            May 19, 2019 - Freemont, Nebraska, USA
+            </p>
+            <p>
+            May 25, 2019 - Cambridge, Ontario, CANADA
+            </p>
+            <p>
+            May 26, 2019 - York, Pennsylvania, USA
+            </p>
+          </div>
+    </div>
+    <hr>
+    <!--EMAIL POST REQUEST FORM -->
+    <!--We create a form element that directs the form contents to my OSU email, it asks the user to submit their email for more information regarding CFA Show Schedules via a POST request. We stylize the submit button to match all other buttons throughout the website. The API used for the contact form can be found at https://formspree.io-->
+    	<form method="POST" action="https://formspree.io/syj@oregonstate.edu">
+			<fieldset>
+				<legend>Subscribe to our schedule</legend>
+				
+					<input type="email" name="email" placeholder="Your email"size="30" maxlength="100"/>
+			
+				<input type="submit" class="btn btn-secondary" id="EmailSubmit" value="Submit"/>
+			</fieldset>
+		</form>
+
+	</div>
+
+  	</div>
+
+   </div>
+</div>
+
+
+
+<!--Allows us to use jQuery, which is a library that simplifies DOM node traversal and AJAX. It is required to use Bootstrap 4.0. Source: https://jquery.com/-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<!--Allows for use of Popper JS which is a library that allows for easy identification of positioning of page elements relative to other elements. It is required to use Boostrap 4.0 Source: https://getbootstrap.com/docs/4.0/getting-started/introduction/-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!--Required Javascript files to utilize bootstrap's JS features via Boostrap's content delivery network Source: https://getbootstrap.com/docs/4.0/getting-started/introduction/-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!--Using premade social media icons i.e. the logo for instagram, twitter, and facebook that will act as buttons for the respective platform for The Cat Fancier's Association Source: https://fontawesome.com/-->
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
